@@ -13,7 +13,7 @@
   }
 }
 .footer {
-  height: 20vh;
+  height: 10vh;
   width: 100%;
   .item {
     display: flex;
@@ -26,6 +26,9 @@
     top: 50%;
     transform: translateY(-50%);
   }
+}
+.spacer {
+  height: 5vh;
 }
 .content {
   width: 100%;

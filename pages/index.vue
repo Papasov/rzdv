@@ -11,12 +11,14 @@
         <img src="../assets/img/test.png" alt="" />
       </div>
     </div>
+    <div class="spacer"></div>
     <div class="footer">
       <div class="item">
         <div>контакты</div>
         <div>к проекту</div>
       </div>
     </div>
+    <div class="spacer"></div>
   </div>
 </template>
 
