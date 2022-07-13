@@ -1,12 +1,12 @@
 <template>
   <div>
     <div class="main">
-      <header class="header">
+      <div class="header">
         <div class="item">
           <div>раз</div>
           <div>два</div>
         </div>
-      </header>
+      </div>
       <div class="content">
         <div class="slides">
           <img src="../assets/img/test.png" alt="" />
@@ -29,9 +29,6 @@ export default {
   data() {
     return {}
   },
-  mounted() {
-    //this.el = document.getElementById('main')
-    //this.el.style.minHeight = window.vh
-  },
+  mounted() {},
 }
 </script>
