@@ -3,6 +3,10 @@ export default {
   ssr: false,
 
   // Global page headers: https://go.nuxtjs.dev/config-head
+  server: {
+    port: 3000, // default: 3000
+    host: '192.168.0.178', // default: localhost
+  },
   head: {
     title: 'rzdv',
     htmlAttrs: {
@@ -21,7 +25,7 @@ export default {
   css: ['@assets/scss/style.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: ['@/plugins/vh'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,

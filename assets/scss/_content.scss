@@ -1,3 +1,5 @@
+@import '~/vue-mobile-viewport-height/src/mobile-viewport-height.scss';
+
 .header {
   height: 20vh;
   .item {
@@ -45,6 +47,10 @@
     top: 50%;
     transform: translateY(-50%);
   }
+}
+
+.main {
+  @include mobile-viewport-height();
 }
 @media (max-width: 767.98px) {
   .header {
