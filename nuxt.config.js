@@ -4,8 +4,8 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   server: {
-    port: 3000, // default: 3000
-    host: '192.168.0.178', // default: localhost
+    //port: 3000, // default: 3000
+    //host: '192.168.0.178', // default: localhost
   },
   head: {
     title: 'rzdv',

@@ -8,13 +8,16 @@
   .item {
     display: flex;
     padding: 0 48px;
-    justify-content: space-between;
+    //justify-content: space-between;
     text-align: center;
     font-weight: normal;
     font-size: 24px;
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+    .dash {
+      padding-top: 2px;
+    }
   }
 }
 .footer {
@@ -30,6 +33,23 @@
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+    .link {
+      cursor: pointer;
+    }
+  }
+  .item-all {
+    display: flex;
+    padding: 0 48px;
+    justify-content: center;
+    text-align: center;
+    font-weight: normal;
+    font-size: 15px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    .link {
+      cursor: pointer;
+    }
   }
 }
 .spacer {
@@ -39,6 +59,9 @@
   width: 100%;
   text-align: center;
   height: 60vh;
+  p {
+    font-size: 15px;
+  }
 }
 .slides {
   height: 100%;
@@ -46,6 +69,12 @@
   img {
     max-height: 100%;
     max-width: 90%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  .item {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
