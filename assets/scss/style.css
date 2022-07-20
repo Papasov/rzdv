@@ -80,6 +80,14 @@ h1 {
 .footer .item .link {
   cursor: pointer;
 }
+.footer .item a {
+  text-decoration: none;
+  color: #333;
+}
+.footer .item a:hover {
+  text-decoration: none;
+  color: #333;
+}
 .footer .item-all {
   display: flex;
   padding: 0 48px;
@@ -119,6 +127,17 @@ h1 {
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
+}
+.slides .desc {
+  font-size: 14px;
+  line-height: 18px;
+  margin-top: 6px;
+  color: #838383;
+}
+.slides .body {
+  margin: 0 auto;
+  width: 50%;
+  font-size: 15px;
 }
 .slides .item {
   position: relative;

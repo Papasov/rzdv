@@ -36,6 +36,14 @@
     .link {
       cursor: pointer;
     }
+    a {
+      text-decoration: none;
+      color: #333;
+      &:hover {
+        text-decoration: none;
+        color: #333;
+      }
+    }
   }
   .item-all {
     display: flex;
@@ -63,6 +71,7 @@
     font-size: 15px;
   }
 }
+
 .slides {
   height: 100%;
   margin: 0 auto;
@@ -73,6 +82,17 @@
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
+  }
+  .desc {
+    font-size: 14px;
+    line-height: 18px;
+    margin-top: 6px;
+    color: #838383;
+  }
+  .body {
+    margin: 0 auto;
+    width: 50%;
+    font-size: 15px;
   }
   .item {
     position: relative;

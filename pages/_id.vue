@@ -10,44 +10,48 @@
       </div>
       <div>
         <div class="content" v-show="contact">
-          <div class="slides">
-            <div class="item">
-              <p>+7123456789</p>
-              <p>+7123456789</p>
-              <p>instagram</p>
-            </div>
+          <div
+            class="slides"
+            v-for="project in projects.data"
+            v-if="project.attributes.link == id"
+          >
+            <div
+              class="item body"
+              v-html="project.attributes.description"
+            ></div>
           </div>
         </div>
         <div class="content" v-show="content">
           <div
             class="slides"
-            v-for="(project, index) in projects.data"
-            v-show="index == counter"
+            v-for="project in projects.data"
+            v-if="project.attributes.link == id"
           >
             <img
               v-for="(item, index) in project.attributes.image.data"
-              v-show="item.attributes.caption == 'main'"
-              @click="next"
+              v-show="index == counter"
+              @click="next(index)"
               :src="'https://api.rzdv.ru' + item.attributes.url"
               alt=""
             />
+            <div class="desc">{{ project.attributes.name }}</div>
           </div>
         </div>
       </div>
       <div class="spacer"></div>
       <div class="footer">
         <div class="item" v-show="content">
-          <div @click="contacts" class="link">контакты</div>
+          <div @click="contacts" class="link">текст</div>
           <nuxt-link
-            :to="`/${project.attributes.link}`"
+            :to="`/${projects.data[index + 1].attributes.link}`"
             v-for="(project, index) in projects.data"
-            v-show="index == counter"
+            v-if="project.attributes.link == id"
           >
-            <div class="link">к проекту</div>
+            <div class="link">следующий проект</div>
           </nuxt-link>
         </div>
         <div class="item-all" v-show="contact">
-          <div class="link" @click="back">проекты</div>
+          <div class="link" @click="back">изображения</div>
         </div>
       </div>
       <div class="spacer"></div>
@@ -66,24 +70,17 @@ export default {
       projects: [],
       covers: [],
       counter: 0,
+      listing: 0,
       contact: false,
       content: true,
       header: 'space-between',
-      id: 0,
       sudid: [],
     }
   },
   mounted() {
+    this.id = this.$route.params.id
     axios.get(this.api).then((response) => {
       this.projects = response.data
-      this.covers = response.data.data
-      this.covers.filter((cover) => {
-        if (cover.attributes.id != 1) {
-          this.subid = cover.attributes.image.data[this.id].attributes.url
-          console.log('one:' + this.subid)
-        }
-      })
-      //this.subid = this.covers.filter((cover) => cover.id == 1).shift().subname
     })
   },
   methods: {
@@ -99,7 +96,7 @@ export default {
     },
     next(index) {
       this.counter++
-      if (this.counter > this.projects.data.length - 1) {
+      if (this.counter > 1) {
         this.counter = 0
       }
     },
