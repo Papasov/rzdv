@@ -4,8 +4,8 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   server: {
-    //port: 3000, // default: 3000
-    //host: '192.168.0.178', // default: localhost
+    port: 3000, // default: 3000
+    host: '192.168.0.178', // default: localhost
   },
   head: {
     title: 'rzdv',
@@ -18,20 +18,48 @@ export default {
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [
+      {
+        rel: 'icon',
+        type: 'image/x-icon',
+        href: '/favicon.ico',
+        media: '(prefers-color-scheme:no-preference)',
+      },
+    ],
+    link: [
+      {
+        rel: 'icon',
+        type: 'image/x-icon',
+        href: '/favicon.ico',
+        media: '(prefers-color-scheme:light)',
+      },
+    ],
+    link: [
+      {
+        rel: 'icon',
+        type: 'image/x-icon',
+        href: '/favicon-dark.ico',
+        media: '(prefers-color-scheme:dark)',
+      },
+    ],
   },
 
+  /*
+<link rel="icon" href="/favicon.ico" media="(prefers-color-scheme:no-preference)">
+<link rel="icon" href="/favicon-dark.ico" media="(prefers-color-scheme:dark)">
+<link rel="icon" href="/favicon.ico" media="(prefers-color-scheme:light)">
+*/
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ['@assets/scss/style.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ['@/plugins/vh'],
+  plugins: ['@/plugins/vh', '@/plugins/mq'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [],
+  buildModules: ['nuxt-animejs'],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
