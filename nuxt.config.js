@@ -23,23 +23,6 @@ export default {
         rel: 'icon',
         type: 'image/x-icon',
         href: '/favicon.ico',
-        media: '(prefers-color-scheme:no-preference)',
-      },
-    ],
-    link: [
-      {
-        rel: 'icon',
-        type: 'image/x-icon',
-        href: '/favicon.ico',
-        media: '(prefers-color-scheme:light)',
-      },
-    ],
-    link: [
-      {
-        rel: 'icon',
-        type: 'image/x-icon',
-        href: '/favicon-dark.ico',
-        media: '(prefers-color-scheme:dark)',
       },
     ],
   },

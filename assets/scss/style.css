@@ -170,11 +170,13 @@ h1 {
   width: 280px;
   font-size: 15px;
   text-align: justify;
+  line-height: 17px;
 }
 .slides .item {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+  line-height: 17px;
 }
 .slides .item span {
   font-size: 15px;
@@ -208,6 +210,10 @@ h1 {
   .header .containerHead {
     padding: 0 12px;
     font-size: 22px;
+  }
+  .header .containerHead .dash {
+    padding-top: 2px;
+    transition: none;
   }
 
   .footer .item {

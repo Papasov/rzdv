@@ -81,7 +81,7 @@ export default {
   mounted() {
     if (this.$mq === 'sm') {
       this.width = '107.61px'
-      this.speed = 125
+      this.speed = 1
     } else {
       this.width = '187.23px'
       this.speed = 250

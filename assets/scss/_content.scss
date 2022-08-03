@@ -126,11 +126,13 @@
     width: 280px;
     font-size: 15px;
     text-align: justify;
+    line-height: 17px;
   }
   .item {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+    line-height: 17px;
     span {
       font-size: 15px;
     }
@@ -162,6 +164,10 @@
     .containerHead {
       padding: 0 12px;
       font-size: 22px;
+      .dash {
+        padding-top: 2px;
+        transition: none;
+      }
     }
   }
   .footer {
