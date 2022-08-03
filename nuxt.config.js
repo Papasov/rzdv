@@ -8,9 +8,9 @@ export default {
     host: '192.168.0.178', // default: localhost
   },
   head: {
-    title: 'rzdv',
+    title: 'раз-два',
     htmlAttrs: {
-      lang: 'en',
+      lang: 'ru',
     },
     meta: [
       { charset: 'utf-8' },
